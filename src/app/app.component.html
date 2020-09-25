@@ -1,0 +1,12 @@
+<div class="container" >
+  <div class="col-12 ">
+    <div class="row">
+      <div class="mainTitle col-6">INSTAWEATHER</div>
+
+      <div class="col-12"> <button class="buttonF rightFloat" (click)="showCTemp = false">F</button>
+        <button class="buttonF rightFloat" (click)="showCTemp = true">C</button></div>
+    </div>
+  </div>
+  <app-header *ngIf="weather" [city]="city" [weather]="weather" [showCTemp]="showCTemp"></app-header>
+  <app-heat-tabs  *ngIf="weather" [hourly]="weather.hourly.data" [daily]="weather.daily.data" [showCTemp]="showCTemp"></app-heat-tabs>
+</div>
